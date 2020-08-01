@@ -1,0 +1,36 @@
+spring:
+  profiles: dev
+server:
+  port: 9000
+---
+spring:
+  profiles: qa
+server:
+  port: 9001
+---
+spring:
+  profiles:
+    active: dev
+---
+management:
+  security:
+    enabled: false
+---
+logging:
+  level:
+    org.springframework.web: ERROR
+    com.aa: DEBUG
+email: onlyankur@gmail.com
+thread-pool: 10
+---
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+---
+management:
+  endpoint:
+    health:
+      show-details: "ALWAYS"
+
