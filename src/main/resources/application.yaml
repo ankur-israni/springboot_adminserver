@@ -34,3 +34,13 @@ management:
     health:
       show-details: "ALWAYS"
 
+
+
+spring:
+    security:
+      user:
+        name: ankur
+        password: ankur
+
+#spring.boot.admin.client.instance.metadata.user.name=${spring.security.u
+#spring.boot.admin.client.instance.metadata.user.password=${spring.securi

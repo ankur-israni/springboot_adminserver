@@ -18,33 +18,11 @@ import java.util.UUID;
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     private final AdminServerProperties adminServer;
 
-    private static final String USERNAME="ankur";
-
-    /**
-     * This is the encoded password for 'ankur'. See PasswordEncoderTests.java
-     */
-    private static final String ENCODED_PASSWORD = "$2a$10$Bx9dal1WI.sjlMi4indgwex/YvlUsfYmO0pv0xVa2q4hGJp73FBou";
-    private static final String USER_ROLE="USER";
-    private static final String ADMIN_ROLE="ADMIN";
-
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
-
     public WebSecurityConfig(AdminServerProperties adminServer) {
         this.adminServer = adminServer;
     }
 
 
-
-//    @Override
-//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-//        auth
-//                .inMemoryAuthentication()
-//                .passwordEncoder(passwordEncoder)
-//                .withUser(USERNAME)
-//                .password(ENCODED_PASSWORD)
-//                .roles(USER_ROLE, ADMIN_ROLE);
-//    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
