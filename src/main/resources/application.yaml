@@ -36,12 +36,14 @@ management:
 
 
 ---
+# Spring security configuration
 spring:
     security:
       user:
         name: ankur
         password: ankur
 ---
+# Send mail when any client application(being tracked by this spring boot admin app) goes down
 spring:
     mail:
       host: smtp.gmail.com
