@@ -35,12 +35,29 @@ management:
       show-details: "ALWAYS"
 
 
-
+---
 spring:
     security:
       user:
         name: ankur
         password: ankur
+---
+spring:
+    mail:
+      host: smtp.gmail.com
+      username: onlyankur@gmail.com
+      password: choclateicecream
+      port: 587
+      properties:
+          mail:
+            smtp:
+                auth: true
+                starttls: true
+    boot:
+        admin:
+          notify:
+              mail:
+                to: onlyankur@gmail.com
 
-#spring.boot.admin.client.instance.metadata.user.name=${spring.security.u
-#spring.boot.admin.client.instance.metadata.user.password=${spring.securi
+
+
